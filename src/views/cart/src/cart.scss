@@ -1,0 +1,63 @@
+@import 'scss/variables.scss';
+@import 'scss/mixin.scss';
+
+// 通用部分
+.yc-cart {
+  // 删除按钮通用样式
+  .btn-del {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #FF7700;
+    border: 1px solid #FF7700;
+    min-height: 100%;
+    &[disabled=disabled] {
+      background-color:#ccc;
+      border: 1px solid #ccc;
+    }
+    label {
+      color: #fff;
+    }
+  }
+
+  .bq-checkbox-wrapper .bq-checkbox-input:disabled + .bq-checkbox-core {
+    background-color: #d8d8d8;
+  }
+}
+
+.yc-cart {
+  background-color: $bg-color;
+  // header
+  .bq-header {
+    .mint-header-button.is-right {
+      .mint-button-text {
+        color: $font-color;
+        @include font-dpr(14px);
+      }
+    }
+  }
+
+  &-content {
+    margin-bottom: 50px;
+    top: 83px;
+    &[padding-bottom=true] {
+      margin-bottom: 91px;
+    }
+  }
+
+  &__footer {
+    background-color: #FFFFFF;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 15px;
+    z-index: 5;
+    @include font-dpr(16px);
+    color: $font-color;
+    border-top: 1px solid $border-color;
+    bottom: 50px;
+    .btn-del {
+      width: 100px;
+      right: 15px;
+    }
+  }
+}

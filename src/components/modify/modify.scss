@@ -1,0 +1,55 @@
+@import 'scss/variables.scss';
+@import 'scss/mixin.scss';
+$iconImgUrl:'../../assets/img';
+.modify {
+  @include font-dpr(14px);
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  line-height: 24px;
+  .ding {
+    width: 50px;
+    height: 24px;
+    background: $danger;
+    color: #fff;
+    &.no{
+      background: #ccc;
+    }
+  }
+  .ding-add-less {
+    height: 24px;
+    border: 1px solid $danger;/*no*/
+    background: #fff;
+    span {
+      display: block;
+      height: 24px;
+      float: left;
+    }
+    .less, .add {
+      width: 23px;
+      position: relative;
+    }
+    .less {
+      border-right: 1px solid $danger;
+      background: url(#{$iconImgUrl}/icon/less-white.png) $danger center no-repeat;
+      background-size: 14px;
+      &.no{
+        background: url(#{$iconImgUrl}/icon/less-danger.png) #fff center no-repeat;
+        background-size: 14px;
+      }
+    }
+    .change {
+      width: 42px;
+      overflow: hidden;
+    }
+    .add {
+      border-left: 1px solid $danger;
+      background: url(#{$iconImgUrl}/icon/add-white.png) $danger center no-repeat;
+      background-size: 14px;
+      &.no{
+        background: url(#{$iconImgUrl}/icon/add-danger.png) #fff center no-repeat;
+        background-size: 14px;
+      }
+    }
+  }
+}

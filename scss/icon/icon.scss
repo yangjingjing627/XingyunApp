@@ -1,0 +1,27 @@
+// 自定义图标 字体 这里是指的 图片 非 font 方式
+// ----------------------------------
+@import "../variables.scss";
+@import "../mixin.scss";
+$iconImgUrl:'../src/assets/img';
+.bq-icon- {
+  // 返回
+  &back {
+    @include baseIcon('/icon/return_black.png', 20px, 20px);
+  }
+
+  &right {
+    @include baseIcon('/icon/icon-right.png', 20px, 20px);
+  }
+  &input-close {
+    @include baseIcon('/icon/close.png', 16px, 16px);
+  }
+  // 下拉箭头
+  &arrow-dwon {
+    @include baseIcon('/icon/icon-down.png',16px, 8px){
+    };
+  }
+  &key-del {
+    @include baseIcon('/components/pay/del.png',16px, 16px){
+    };
+  }
+}

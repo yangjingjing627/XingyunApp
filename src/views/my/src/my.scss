@@ -1,0 +1,76 @@
+@import 'scss/variables';
+@import 'scss/mixin';
+.my-view {
+  .top {
+    background: #fff;
+    padding-top: 49px;
+    margin-bottom: 10px;
+    @include border-bottom(#DBDBDB);
+    img {
+      width: 62px;
+      height: 62px;
+      display: block;
+      margin: 0 auto;
+    }
+    p {
+      color: #505050;
+      @include font-dpr(14px);
+      text-align: center;
+      padding: 14px 0 41px 0;
+    }
+  }
+  .bq-content .scroller .bq-card{
+    margin-bottom: 11px;
+    span {
+      @include font-dpr(12px);
+      color: #999999;
+    }
+    &:after {
+      border-left: none;
+      border-right: none;
+    }
+  }
+  .bq-card-item[padding] {
+    padding-left: 37px;
+  }
+  .bq-card-item__info {
+    i{
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      left: 11px;
+      top: 11px;
+    }
+    .wallet{
+      background: url(../../../assets/img/my/bag.png) no-repeat;
+      background-size: 20px;
+    }
+    .coupon{
+      background: url(../../../assets/img/my/coupon.png) no-repeat;
+      background-size: 20px;
+    }
+    .info{
+      background: url(../../../assets/img/my/information.png) no-repeat;
+      background-size: 20px;
+    }
+    .pay{
+      background: url(../../../assets/img/my/key.png) no-repeat;
+      background-size: 20px;
+    }
+    .set{
+      background: url(../../../assets/img/my/setting.png) no-repeat;
+      background-size: 20px;
+    }
+  }
+  .btn {
+    padding: 0 15px;
+    margin-bottom: 70px;
+    button {
+      // position: absolute;
+      // bottom: 80px;
+      width: 92%;
+      margin: 20px auto;
+    }
+  }
+}

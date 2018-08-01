@@ -1,0 +1,17 @@
+i[class^="single-border-"]{
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  display: inline-block;
+  transform: scaleY(0.5);
+  opacity: 0.6;
+  left: 0;
+}
+.single-border-{
+  &top{
+    top: 0
+  }
+  &bottom{
+    bottom: 0
+  }
+}

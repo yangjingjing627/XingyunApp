@@ -1,0 +1,50 @@
+$msgbox-content-color: $font-color;
+$msgbox-btn-color: $font-color;
+$msgbox-border-radius: 0;
+$msgbox-font-size: 14px;
+.mint-msgbox-wrapper {
+  .mint-msgbox {
+    width: 250px;
+    border-radius: $msgbox-border-radius;
+    &-header{
+      // display: none;
+      .mint-msgbox-title {
+        @include font-dpr(14px);
+        color: $msgbox-btn-color;
+        font-weight: normal;
+      }
+    }
+    &-content {
+      min-height: auto;
+      padding: 15px 10px;
+    }
+    &-message {
+      @include font-dpr($msgbox-font-size);
+      color: $msgbox-content-color;
+      line-height: 22px;
+    }
+    &-btns {
+      height: 48px;
+      line-height: 48px;
+    }
+    &-btn {
+      background-color: $primary;
+      @include font-dpr(14px);
+      color: $msgbox-btn-color;
+    }
+    &-cancel {
+      background: #fff;
+    }
+    &-input{
+      input{
+        text-align: center;
+        width: 220px;
+      }
+    }
+    .bq-msg-confirm-cancel {
+      background: #FF8113;
+      border-radius: 0 0 1px 0;
+      color: #fff;
+    }
+  }
+}

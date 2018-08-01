@@ -1,0 +1,202 @@
+@import 'scss/variables';
+@import 'scss/mixin';
+
+.coupon-modify {
+  .coupon-item {
+    margin: 10px 15px;
+    margin-top: 0;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 0.5px solid #FFE479;
+    border-radius: 4px;
+    position: relative;
+    .content {
+      padding: 15px 19px;
+      padding-bottom: 0;
+      border-bottom: 1px dashed #F2F2F2;
+      .rule {
+        font-size: 12px;
+        color: #666;
+        height: 36px;
+        line-height: 36px;
+        margin-top: -2px;
+        .tag {
+          font-size: 10px;
+          -webkit-text-size-adjust:none;
+          -webkit-transform:scale(0.8);
+          -webkit-transform-origin:0 0;
+          -o-transform:scale(1);
+          display: inline-block;
+          color: #fff;
+          i {
+            position: relative;
+            top: 5px;
+            background: #FF3D3D;
+            padding: 2px;
+            padding-left: 3px;
+            padding-right: 3px;
+          }
+          i.tag2 {
+            background: #FF8113;
+          }
+          i.tag3 {
+            background: #4AA7F5;
+          }
+        }
+      }
+      .operation {
+        width: 105px;
+        height: 80px;
+        text-align: center;
+        padding-top: 5px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-left: 1px dashed #F2F2F2;
+        .money {
+          padding-top: 5px;
+          display: block;
+          color: $coupon-color;
+          .get-Money {
+            font-size: 30px;
+          }
+          .ping-Money {
+            display: inline-block;
+            font-size: 20px;
+            padding: 8px 0;
+            padding-top: 15px;
+          }
+        }
+        .btn {
+          margin-top: -10px;
+          width: 60px;
+          height: 20px;
+          line-height: 20px;
+          // padding: 2px 0;
+          text-align: center;
+          display: inline-block;
+          background: #FFFFFF;
+          border: 0.5px solid #CCCCCC;
+          border-radius: 11px;
+          span {
+            color: #666;
+            font-size: 10px;
+            -webkit-text-size-adjust:none;
+            -webkit-transform:scale(0.8);
+            -webkit-transform-origin:0 0;
+            -o-transform:scale(1);
+            display: inline-block;
+            position: relative;
+            top: 2px;
+            left: 0;
+            width: 125%;
+          }
+        }
+        .got {
+          background: #CCCCCC;
+          span {
+            color: #fff;
+          }
+        }
+        .usered {
+          color: $coupon-color;
+          margin-top: -8px;
+        }
+      }
+      .chooseCoupon {
+        padding-top: 20px;
+      }
+    }
+    .rule-time {
+      font-size: 11px;
+      -webkit-text-size-adjust:none;
+      -webkit-transform:scale(0.9);
+      -webkit-transform-origin:0 0;
+      -o-transform:scale(1);
+      display: block;
+      color: #999;
+      position: relative;
+      top: -5px;
+      .seller-style {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 250px;
+      }
+    }
+    .dot {
+      i {
+        margin-top: -5px;
+        display: block;
+        width: 7px;
+        height: 7px;
+        border: 0.5px solid #FFE479;
+        background: $bg-color;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); 	/* IE 9 */
+        -moz-transform:rotate(45deg); 	/* Firefox */
+        -webkit-transform:rotate(45deg);
+        position: absolute;
+      }
+      .left {
+        border-left: none;
+        border-bottom: none;
+        left: -4px;
+      }
+      .right {
+        border-right: none;
+        border-top: none;
+        right: -4px;
+      }
+    }
+    .footer {
+      display: block;
+      padding-top: 12px;
+      padding-left: 19px;
+      a {
+        color: #999;
+        float: right;
+        padding-right: 12px;
+        position: relative;
+        right: -10px;
+      }
+      a:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        background: url(../../assets/img/icon/icon-down.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 7px;
+        right: 0px;
+      }
+      .active:after {
+        transform:rotate(180deg);
+        top: 3px;
+      }
+      .look-order:after {
+        width: 15px;
+        height: 15px;
+        background: url(../../assets/img/icon/icon-right.png) no-repeat;
+        background-size: 100%;
+        top: 2px;
+        right: -1px;
+      }
+      .foot-ul {
+        color: #999;
+        margin-top: 0;
+        margin-bottom: 10px;
+        li {
+          padding-right: 19px;
+          margin-bottom: 2px;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+  .bq-card:after {
+    border: none;
+  }
+}

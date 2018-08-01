@@ -1,0 +1,76 @@
+$defalut-bg: #E5E5E5;
+$double-ad-height: 88px;
+.bq-template {
+  width: 100%;
+  height: calc(100% + 100px);
+  min-height: 667px;
+  &-banner {
+    margin-top: 44px;
+    margin-bottom: 10px;
+    width: 100%;
+    // height: 180px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    background-color: $defalut-bg;
+  }
+
+  // 单个广告位
+  &-single-ad {
+    min-height: 80px;
+    margin: 0 10px;
+    z-index: 1;
+    background-color: #cccccc;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    margin-bottom: 8px;
+  }
+
+  // 双栏广告位
+  &-double-ad {
+    margin: 0 10px 8px 10px;
+    height: $double-ad-height;
+    z-index: 1;
+    display: flex;
+    &__left {
+      width: 50%;
+      height: $double-ad-height;
+      background-color: $defalut-bg;
+      margin-right: 3px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__right {
+      margin-left: 3px;
+      width: 50%;
+      height: $double-ad-height;
+      background-color: $defalut-bg;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &-tabs {
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
+}

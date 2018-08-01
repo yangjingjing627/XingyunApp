@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixin.scss';
+.bq-icon {
+  &-cart {
+    @include baseIcon('/icon/cart.png', 20px, 20px);
+  }
+  &-cart-black {
+    @include baseIcon('/icon/shoppingcart.png', 25px, 26px);
+  }
+
+  // 专题页用 或者其他需要购物车的页面
+  &-cart-max {
+    @include baseIcon('/icon/cart-max.png', 47px, 47px);
+  }
+}
