@@ -49,7 +49,7 @@ service.interceptors.response.use(
     if (Vue.bqUtils.isUndefined(code)) {
       return response.data
     }
-    if (code !== '0') {
+    if (code !== '1') {
       // 登录失效时移除cookie
       if (code === 'TOKENINVALID_999') {
         Vue.$messagebox.alert(message).then(() => {

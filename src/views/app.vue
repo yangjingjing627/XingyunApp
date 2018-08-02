@@ -6,21 +6,12 @@
       <bq-tabs v-model="selected" :fixed="true">
         <bq-tab id="home" @click.native="onTabItem('home')">
           <i class="bq-icon-root-home" slot="icon"></i>
-          首页
+          获得积分
         </bq-tab>
         <bq-tab id="category" @click.native="onTabItem('category')">
           <i class="bq-icon-root-category" slot="icon"></i>
-          分类
+          市场
         </bq-tab>
-        <bq-tab id="cart" @click.native="onTabItem('cart')">
-          <i class="bq-icon-root-cart" slot="icon"></i>
-          <cart-count></cart-count>
-          订货车
-        </bq-tab>
-        <bq-tab id="order" @click.native="onTabItem('order')">
-          <i class="bq-icon-root-order" slot="icon"></i>
-          订单
-      </bq-tab>
         <bq-tab id="me" @click.native="onTabItem('me')">
           <i class="bq-icon-root-me" slot="icon"></i>
           我的

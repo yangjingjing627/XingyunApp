@@ -25,12 +25,6 @@
           买家信息
         </bq-card-item>
       </bq-card>
-      <!-- <bq-card>
-        <bq-card-item padding no-margin :icon="true" :href="'/me/passwordset'">
-          <i class="pay"></i>
-          支付密码
-        </bq-card-item>
-      </bq-card> -->
       <bq-card>
         <bq-card-item padding no-margin :icon="true" :href="'/me/set'">
           <i class="set"></i>

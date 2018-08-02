@@ -1,6 +1,5 @@
 // 接口地址
-export let API_HOST = bq.isProductionAPI ? 'http://yuncai.bqmart.cn/cloud/api/' : 'http://test.cloud.bqmart.cn/cloud/api/'
-// export let API_HOST = 'http://192.168.0.57:8080/cloud/api/'
+export let API_HOST = bq.isProductionAPI ? 'http://api/' : 'http://test/api/'
 
 // 版本
 export let VERSION = bq.version || '1.0'
