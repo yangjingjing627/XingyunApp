@@ -1,32 +1,15 @@
 <template>
   <div class="home">
-    <!-- <header>
-      <div class="logo">
-      </div>
-      <div class="search" @click="onChangeSearch()">
-        <i class="bq-icon-home-search"></i>
-        <input placeholder="请输入商品名称/条码" :value="params.parameter">
-      </div>
-      <div class="btns">
-        <scan @scan="onScan">
-          <bq-button>
-            <i slot="icon" class="bq-icon-home-scan"></i>
-          </bq-button>
-        </scan>
-      </div>
-    </header> -->
     <tabs v-if="isShowTopTab" v-model="selectedHome" @tab="loadGoods()"></tabs>
     <bq-content has-footer @scroll="resetScrollVariable" ref="content" >
       <bq-swipe :auto="5000" class="banner">
         <bq-swipe-item v-for="(item,index) in bannerList" :key="'banner'+index">
           <a @click="bannerFun(item)" >
-            <img class="banner-bg" :src="item.programPic || 'http://ogd5wcvme.bkt.clouddn.com/no-img.png'" >
+            <img class="banner-bg" :src="item.programPic" >
           </a>
         </bq-swipe-item>
       </bq-swipe>
       <single></single>
-      <!-- <assemble></assemble>
-      <brand></brand> -->
       <tabs id="tab" v-model="selectedHome" @tab="loadGoods()"></tabs>
       <bq-good-content
         v-if="goodsList.length"
