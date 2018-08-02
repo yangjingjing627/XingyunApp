@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <header>
+    <!-- <header>
       <div class="logo">
       </div>
       <div class="search" @click="onChangeSearch()">
@@ -14,7 +14,7 @@
           </bq-button>
         </scan>
       </div>
-    </header>
+    </header> -->
     <tabs v-if="isShowTopTab" v-model="selectedHome" @tab="loadGoods()"></tabs>
     <bq-content has-footer @scroll="resetScrollVariable" ref="content" >
       <bq-swipe :auto="5000" class="banner">

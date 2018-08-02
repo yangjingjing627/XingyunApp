@@ -1,22 +1,18 @@
 <template>
   <div class="my-view">
     <bq-content>
-      <div class="top">
-        <img src="../../../assets/img/my/chahua.png" alt="">
-        <p>{{ info.storeName }}</p>
-      </div>
       <bq-card>
         <bq-card-item padding no-margin :icon="true" :href="'/me/wallet'">
           <i class="wallet"></i>
-          我的钱包
-          <span slot="right">￥{{$bqUtils.moneyFixed(info.balance)}}</span>
+          头像
+          <span slot="right">￥7384485</span>
         </bq-card-item>
       </bq-card>
       <bq-card>
         <bq-card-item padding no-margin :icon="true" :href="'/me/coupon'">
           <i class="coupon"></i>
-          优惠券
-          <span slot="right">{{ info.couponNum || 0 }}张</span>
+          昵称
+          <span slot="right">0张</span>
         </bq-card-item>
       </bq-card>
       <bq-card>
@@ -85,5 +81,11 @@ export default {
 @import './my.scss';
 .bq-content {
   top: 0;
+}
+.bq-card:after {
+  border: 0;
+}
+.bq-card-item {
+  color: #FFF;
 }
 </style>

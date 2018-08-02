@@ -50,9 +50,9 @@ export default function LoadingConfig(router, store) {
     // 调用微信签名
     store.dispatch('initWx', `${window.location.origin}${fullPath}`)
     // loading 处理
-    if (!store.state.loading.isLastLoading[name]) {
-      store.commit('UPDATE_LOADING', { isLoading: true })
-    }
+    // if (!store.state.loading.isLastLoading[name]) {
+    //   store.commit('UPDATE_LOADING', { isLoading: true })
+    // }
     if (/^http/.test(path)) {
       let url = path.split('http')[1]
       window.location.href = `http${url}`

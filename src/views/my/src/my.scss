@@ -5,7 +5,7 @@
     background: #fff;
     padding-top: 49px;
     margin-bottom: 10px;
-    @include border-bottom(#DBDBDB);
+    // @include border-bottom(#DBDBDB);
     img {
       width: 62px;
       height: 62px;
@@ -67,8 +67,6 @@
     padding: 0 15px;
     margin-bottom: 70px;
     button {
-      // position: absolute;
-      // bottom: 80px;
       width: 92%;
       margin: 20px auto;
     }

@@ -13,7 +13,7 @@ const service = axios.create({
 })
 // loading 组
 let ARR_LOADING = []
-let IS_LOADING = false
+// let IS_LOADING = false
 // service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 service.interceptors.request.use(config => {
   // Do something before request is sent
@@ -21,13 +21,13 @@ service.interceptors.request.use(config => {
   //   // 让每个请求携带token--['X-Token']为自定义key 请根据实际情况自行修改
   //   config.headers['X-Token'] = store.user.token
   // }
-  if (config.isLoading) {
-    if (!IS_LOADING) {
-      ARR_LOADING.push(config.url)
-      IS_LOADING = true
-      Vue.$indicator.open()
-    }
-  }
+  // if (config.isLoading) {
+  //   if (!IS_LOADING) {
+  //     ARR_LOADING.push(config.url)
+  //     IS_LOADING = true
+  //     Vue.$indicator.open()
+  //   }
+  // }
   return config
 }, error => {
   // Do something with request error
@@ -42,7 +42,7 @@ service.interceptors.response.use(
       ARR_LOADING.splice(index, 1)
       if (ARR_LOADING.length === 0) {
         Vue.$indicator.close()
-        IS_LOADING = false
+        // IS_LOADING = false
       }
     }
     // 如果不是code 返回值
@@ -75,13 +75,13 @@ service.interceptors.response.use(
     }
   },
   error => {
-    if (error.message !== undefined) {
-      // 所有非 200 的请求的提示此错误 如果是业务逻辑的错误消息 请走200状态
-      Vue.$messagebox.alert('网络异常, 请刷新重试')
-      ARR_LOADING = []
-      Vue.$indicator.close()
-      IS_LOADING = false
-    }
+    // if (error.message !== undefined) {
+    //   // 所有非 200 的请求的提示此错误 如果是业务逻辑的错误消息 请走200状态
+    //   Vue.$messagebox.alert('网络异常, 请刷新重试')
+    //   ARR_LOADING = []
+    //   Vue.$indicator.close()
+    //   IS_LOADING = false
+    // }
     return Promise.reject(error)
   }
 )

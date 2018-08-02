@@ -12,7 +12,7 @@
   @import 'scss/variables.scss';
   @import 'scss/mixin.scss';
   .bq-card {
-    background-color: #fff;
+    // background-color: #fff;
     border-radius: $card-radius;
     @include border-zero-5 {
       border-radius: $card-radius * 2;
