@@ -33,7 +33,7 @@ export default class AuthService {
   }
   /**
    *
-   * 登录好升意授权 新版
+   * 登录好生意授权 新版
    * @param {any} params.authIphone 手机号 [必须]
    * @param {any} params.password 密码 [必须]
    * @param {any} params.hsyStoreId 好升益店铺id | 是

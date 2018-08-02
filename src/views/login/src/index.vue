@@ -30,16 +30,16 @@
       }
     },
     created() {
-      let isLoggedIn = !this.$cookie.get('uid') || !this.$cookie.get('token')
-      if (this.$route.query.isNewLogin === 'isScan') {
-        this.$router.replace('/login')
-      } else {
-        if (!isLoggedIn) {
-          this.$router.replace('/home')
-          return
-        }
-      }
-      this.UserService = new UserService()
+      // let isLoggedIn = !this.$cookie.get('uid') || !this.$cookie.get('token')
+      // if (this.$route.query.isNewLogin === 'isScan') {
+      //   this.$router.replace('/login')
+      // } else {
+      //   if (!isLoggedIn) {
+      //     this.$router.replace('/home')
+      //     return
+      //   }
+      // }
+      // this.UserService = new UserService()
     },
     computed: {
       isLogin() {
