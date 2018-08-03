@@ -3,14 +3,11 @@
   height: 40px;
   justify-content: center;
   background-image: none;
-  background-color: #fff;
+  background-color: $footer-bg;
   z-index: 3;
   @include border-bottom($border-color);
   .mint-tab-item {
     padding: 12px 0;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     z-index: 4;
     &-label {
       color: $font-color;
@@ -20,9 +17,9 @@
 }
 
 .mint-tabbar>.mint-tab-item.is-selected {
-  background-color: #fff;
+  background-color: $footer-bg;
   .mint-tab-item-label {
-    color: $primary;
+    color: #0097F6;
     font-weight: 100;
     position: relative;
     &:after {
@@ -30,7 +27,6 @@
       height: 2px;
       width: 100%;
       height: 2px;
-      background-color: $primary;
       position: absolute;
       left: 0;
       bottom: -14px;

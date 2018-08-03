@@ -104,13 +104,13 @@
           }
           &-label {
             font-size: 10px;
-            color: #666;
+            color: #999;
           }
         }
       }
       .mint-tabbar > .mint-tab-item.is-selected .mint-tab-item-label {
         position: initial;
-        color: $font-color;
+        color: #0097F6;
         &:after {
           height: 0;
         }

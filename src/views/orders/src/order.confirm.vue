@@ -380,7 +380,7 @@ export default {
     background-color: inherit;
   }
   .mint-tabbar > .mint-tab-item.is-selected{
-    background:$primary;
+    background: $footer-bg;
     border-radius: 1px;
     color: inherit;
     @include font-dpr(14px);

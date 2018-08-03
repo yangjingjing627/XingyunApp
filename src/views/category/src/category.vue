@@ -3,7 +3,7 @@
     <!-- <bq-header title="市场" :isLeftIcon="true">
     </bq-header> -->
     <div class="content">
-
+      是否获得丰富的
     </div>
   </div>
 </template>

@@ -24,11 +24,11 @@
           :good="good">
         </bq-good-item>
       </bq-good-content>
-      <div class="bq-f-loading" v-show="status.loading && !status.noMoreGoods">
+      <!-- <div class="bq-f-loading" v-show="status.loading && !status.noMoreGoods">
         <bq-triple-bounce></bq-triple-bounce>
-      </div>
-      <p class="no-goods" v-show="status.noMoreGoods">已加载完所有商品</p>
-      <p class="no-goods" v-show="status.noSearchGoods">暂未找到您要搜索的商品</p>
+      </div> -->
+      <!-- <p class="no-goods" v-show="status.noMoreGoods">已加载完所有商品</p> -->
+      <p class="no-goods">暂未找到您要搜索的商品</p>
     </bq-content>
     <user-gifts v-if="showGifts" :info="giftsInfo" :type="register" :tagShow="tagShow" @closeDialog="closeGiftsDialog"></user-gifts>
   </div>
