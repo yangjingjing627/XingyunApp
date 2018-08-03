@@ -84,7 +84,6 @@
     .bq-footer.bq-app-tabs {
       z-index: 1999;
       height: 49px;
-      border-top:1px solid $light-border-color;
       .mint-tabbar {
         height: 49px;
         .mint-tab-item {
@@ -110,7 +109,7 @@
       }
       .mint-tabbar > .mint-tab-item.is-selected .mint-tab-item-label {
         position: initial;
-        color: #0097F6;
+        color: $footer-color;
         &:after {
           height: 0;
         }

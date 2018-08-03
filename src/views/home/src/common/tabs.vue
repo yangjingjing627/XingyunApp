@@ -1,16 +1,20 @@
 <template>
   <bq-tabs v-model="currentVal" class="home-tabs">
     <bq-tab id="allclassification" @click.native="onTab">
-      推荐
+      <p>邀请好友</p>
+      <bq-button>去邀请 +1</bq-button>
     </bq-tab>
     <bq-tab id="new" @click.native="onTab">
-      新品
+      <p>每日签到</p>
+      <bq-button>去签到 +1</bq-button>
     </bq-tab>
     <bq-tab id="selling" @click.native="onTab">
-      热销
+      <p>矿机时长</p>
+      <bq-button>敬请期待</bq-button>
     </bq-tab>
     <bq-tab id="oftenbuy" @click.native="onTab">
-      常买
+      <p>实名认证</p>
+      <bq-button>去认证</bq-button>
     </bq-tab>
   </bq-tabs>
 </template>
@@ -39,3 +43,8 @@ export default {
   }
 }
 </script>
+<style media="screen">
+  bq-tabs .mint-button-text {
+    font-size: 8px;
+  }
+</style>

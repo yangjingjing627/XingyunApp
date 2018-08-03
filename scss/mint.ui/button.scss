@@ -1,21 +1,23 @@
 .mint-button {
+  height: 24px;
   &--primary {
     background-color: $primary;
     color: $button-color;
-    border-radius: 1px;
+    border-radius: 4px;
   }
   &-text {
-    @include font-dpr(16px);
+    @include font-dpr(10px);
     color: $button-color;
   }
 
   &--default {
-    background: #FFFFFF;
-    border: 1px solid $primary;
-    border-radius: 1px;
+    background: $button-bg;
+    border-radius: 4px;
     box-shadow: none;
   }
-
+  &--normal {
+    padding: 0 4px;
+  }
   &--danger {
     background-color: $danger;
     .mint-button--normal .mint-button-text {

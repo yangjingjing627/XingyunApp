@@ -1,36 +1,10 @@
 <template>
   <div class="home">
-    <tabs v-if="isShowTopTab" v-model="selectedHome" @tab="loadGoods()"></tabs>
     <bq-content has-footer @scroll="resetScrollVariable" ref="content" >
-      <bq-swipe :auto="5000" class="banner">
-        <bq-swipe-item v-for="(item,index) in bannerList" :key="'banner'+index">
-          <a @click="bannerFun(item)" >
-            <img class="banner-bg" :src="item.programPic" >
-          </a>
-        </bq-swipe-item>
-      </bq-swipe>
-      <single></single>
-      <tabs id="tab" v-model="selectedHome" @tab="loadGoods()"></tabs>
-      <bq-good-content
-        v-if="goodsList.length"
-        v-infinite-scroll="loadMore"
-        infinite-scroll-disabled="status.loading"
-        infinite-scroll-distance="50"
-        infinite-scroll-immediate-check = false>
-        <bq-good-item
-          class="home-goods-item"
-          v-for="good in goodsList"
-          :key="good.sku"
-          :good="good">
-        </bq-good-item>
-      </bq-good-content>
-      <!-- <div class="bq-f-loading" v-show="status.loading && !status.noMoreGoods">
-        <bq-triple-bounce></bq-triple-bounce>
-      </div> -->
-      <!-- <p class="no-goods" v-show="status.noMoreGoods">已加载完所有商品</p> -->
+      <tabs id="tab" v-model="selectedHome"></tabs>
       <p class="no-goods">暂未找到您要搜索的商品</p>
     </bq-content>
-    <user-gifts v-if="showGifts" :info="giftsInfo" :type="register" :tagShow="tagShow" @closeDialog="closeGiftsDialog"></user-gifts>
+    <!-- <user-gifts v-if="showGifts" :info="giftsInfo" :type="register" :tagShow="tagShow" @closeDialog="closeGiftsDialog"></user-gifts> -->
   </div>
 </template>
 <script>
@@ -38,8 +12,6 @@ import HomeService from '@/services/home.service'
 import GoodService from '@/services/goods.service'
 import single from './single/single'
 import { goPage } from './home'
-// import assemble from './assemble/assemble'
-// import brand from './brand/brand'
 import tabs from './common/tabs.vue'
 import { mapState } from 'vuex'
 
@@ -175,20 +147,6 @@ export default {
     },
     onChangeSearch() {
       this.$router.push({name: 'SearchNew'})
-      // let value = e.target.value || ''
-      // if (value.length > 0) {
-      //   this.params.parameter = value
-      //   this.goodsList = []
-      //   this.params.page = 1
-      //   this.status.loading = false
-      //   this.status.noMoreGoods = false
-      //   this.loadMore()
-      //   return
-      // }
-      // if (value.length === 0) {
-      //   this.params.parameter = null
-      //   this.loadGoods()
-      // }
     },
     onScan(val) {
       this.params.parameter = val
@@ -206,8 +164,6 @@ export default {
   components: {
     'single': single,
     tabs: tabs
-    // 'assemble': assemble,
-    // 'brand': brand
   }
 }
 </script>
@@ -220,6 +176,9 @@ export default {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    .mint-button {
+      height: 24px;
+    }
     #topTab {
       display: none;
       &.active {
@@ -240,9 +199,6 @@ export default {
       align-items: center;
       background: #fff;
       border-bottom: 1px solid #f1f1f1;
-      // background: url(#{$iconImgUrl}/home/top-back.png) no-repeat;
-      // background-size: 100% 100%;
-      // z-index: 5;
       .logo{
         width: 45px;
         height: 22px;
@@ -267,17 +223,13 @@ export default {
           color: #999;
           @include font-dpr(12px);
           @include appearance(none);
-          // background: rgba(255,255,255, .4);
           border: none;
           font-weight: 300!important;
-          // letter-spacing: 2px;
-          // opacity: .8;
           &::-webkit-input-placeholder {
             text-indent: 0;
             color: #999;
             @include font-dpr(12px);
             font-weight: 300!important;
-            // letter-spacing: 2px;
           }
         }
         i {
@@ -328,30 +280,27 @@ export default {
       }
     }
     .home-tabs {
-      height: 44px;
+      height: 64px;
       padding: 12px 0;
       box-sizing: border-box;
       margin-bottom: 1px;
       .mint-tab-item {
-        padding: 0 20px;
-        border-right: 1px solid #e5e5e5;
-        &:last-child{
-          border-right: 0;
+        // padding: 0 20px;
+        &.is-selected {
+          background: none;
         }
       }
-      // .mint-tab-item-icon {
-      //   width: 33px;
-      //   height: 33px;
-      // }
       .mint-tab-item-label {
-        font-size: 12px;
-        @include font-dpr(14px);
+        @include font-dpr(10px);
         line-height: 20px;
+        font-weight: 300;
+        p {
+          font-size: 14px;
+        }
       }
       .is-selected {
         .mint-tab-item-label {
           color: $font-color;
-          font-weight: normal;
           &:after {
             bottom: -14px;
             height: 3px;
@@ -359,44 +308,5 @@ export default {
         }
       }
     }
-    // &-goods-item {
-    //   .info {
-    //     padding: 10px 37px 13px 85px;
-    //     .detail {
-    //       h3 {
-    //         @include font-dpr(16px);
-    //         line-height: 16px;
-    //         height: 16px;
-    //         padding: 0px 0;
-    //         margin-bottom: 5px;
-    //       }
-    //       h4 {
-    //         // display: inline-block;
-    //         margin: 0;
-    //         font-size: 14px;
-    //         line-height: 16px;
-    //         height: 16px;
-    //         vertical-align: middle;
-    //         // margin-right: 30px;
-    //       }
-    //     }
-    //     .img {
-    //       width: 60px;
-    //       height: 60px;
-    //       left: 15px;
-    //     }
-    //   }
-    //   .seller {
-    //     padding-left: 15px;
-    //     p {
-    //       @include font-dpr(12px);
-    //     }
-    //     .good-list-btn {
-    //       .modify {
-    //         right: 10px;
-    //       }
-    //     }
-    //   }
-    // }
   }
 </style>

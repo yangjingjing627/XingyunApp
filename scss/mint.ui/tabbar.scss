@@ -4,8 +4,11 @@
   justify-content: center;
   background-image: none;
   background-color: $footer-bg;
+  &.home-tabs {
+    background: none;
+  }
   z-index: 3;
-  @include border-bottom($border-color);
+  // @include border-bottom($border-color);
   .mint-tab-item {
     padding: 12px 0;
     z-index: 4;
@@ -19,7 +22,7 @@
 .mint-tabbar>.mint-tab-item.is-selected {
   background-color: $footer-bg;
   .mint-tab-item-label {
-    color: #0097F6;
+    color: $footer-color;
     font-weight: 100;
     position: relative;
     &:after {
